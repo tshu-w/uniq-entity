@@ -1,0 +1,36 @@
+[project]
+name = "uniq-entity"
+version = "0.1.0"
+description = "A Python package for entity resolution/deduplication/record linkage."
+authors = [
+    {name = "Tianshu Wang", email = "wang@tianshu.me"},
+]
+dependencies = [
+    "retriv>=0.2.3",
+]
+requires-python = ">=3.8"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+# https://github.com/charliermarsh/ruff
+[tool.ruff]
+fix = true
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle
+    "F",   # Pyflakes
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+    "SIM", # flake8-simplify
+    "I",   # isort
+]
+
+
+# https://github.com/pdm-project/pdm
+[tool.pdm]
+distribution = true
